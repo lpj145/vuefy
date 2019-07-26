@@ -21,14 +21,8 @@ export default {
   <v-app>
     <sidebar v-model="sideOpen"></sidebar>
     <navbar @close-sidebar="sideOpen = !sideOpen"></navbar>
-
-    <!-- Sizes your content based upon application components -->
     <v-content>
-
-      <!-- Provides the application the proper gutter -->
-      <v-container fluid grid-list-xl>
-
-        <!-- If using vue-router -->
+      <v-container fluid grid-list-xl style="padding:1.1em;">
         <router-view></router-view>
       </v-container>
     </v-content>
