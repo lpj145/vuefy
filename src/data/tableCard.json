@@ -1,0 +1,38 @@
+[
+  {
+    "name": "Book red",
+    "price": 21.95,
+    "author": "John Doe",
+    "date": "01/02/19"
+  },
+  {
+    "name": "John Deree",
+    "price": 29.00,
+    "author": "Algust Robert",
+    "date": "02/22/11"
+  },
+  {
+    "name": "Tractus",
+    "price": 199.00,
+    "author": "Mr Been",
+    "date": "05/05/93"
+  },
+  {
+    "name": "Some mined fields",
+    "price": 200.59,
+    "author": "Samanth O'look",
+    "date": "07/25/88"
+  },
+  {
+    "name": "Bayner Math",
+    "price": 63.66,
+    "author": "Max Pine",
+    "date": "02/15/10"
+  },
+  {
+    "name": "Something Wrong",
+    "price": 99.65,
+    "author": "Starboy",
+    "date": "12/12/12"
+  }
+]

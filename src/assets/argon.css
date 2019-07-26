@@ -1,0 +1,245 @@
+
+.bg-blue {
+  background-color:#5e72e4!important
+ }
+ a.bg-blue:focus,
+ a.bg-blue:hover,
+ button.bg-blue:focus,
+ button.bg-blue:hover {
+  background-color:#324cdd!important
+ }
+ .bg-indigo {
+  background-color:#5603ad!important
+ }
+ a.bg-indigo:focus,
+ a.bg-indigo:hover,
+ button.bg-indigo:focus,
+ button.bg-indigo:hover {
+  background-color:#3d027b!important
+ }
+ .bg-purple {
+  background-color:#8965e0!important
+ }
+ a.bg-purple:focus,
+ a.bg-purple:hover,
+ button.bg-purple:focus,
+ button.bg-purple:hover {
+  background-color:#683bd7!important
+ }
+ .bg-pink {
+  background-color:#f3a4b5!important
+ }
+ a.bg-pink:focus,
+ a.bg-pink:hover,
+ button.bg-pink:focus,
+ button.bg-pink:hover {
+  background-color:#ed7790!important
+ }
+ .bg-red {
+  background-color:#f5365c!important
+ }
+ a.bg-red:focus,
+ a.bg-red:hover,
+ button.bg-red:focus,
+ button.bg-red:hover {
+  background-color:#ec0c38!important
+ }
+ .bg-orange {
+  background-color:#fb6340!important
+ }
+ a.bg-orange:focus,
+ a.bg-orange:hover,
+ button.bg-orange:focus,
+ button.bg-orange:hover {
+  background-color:#fa3a0e!important
+ }
+ .bg-yellow {
+  background-color:#ffd600!important
+ }
+ a.bg-yellow:focus,
+ a.bg-yellow:hover,
+ button.bg-yellow:focus,
+ button.bg-yellow:hover {
+  background-color:#ccab00!important
+ }
+ .bg-green {
+  background-color:#2dce89!important
+ }
+ a.bg-green:focus,
+ a.bg-green:hover,
+ button.bg-green:focus,
+ button.bg-green:hover {
+  background-color:#24a46d!important
+ }
+ .bg-teal {
+  background-color:#11cdef!important
+ }
+ a.bg-teal:focus,
+ a.bg-teal:hover,
+ button.bg-teal:focus,
+ button.bg-teal:hover {
+  background-color:#0da5c0!important
+ }
+ .bg-cyan {
+  background-color:#2bffc6!important
+ }
+ a.bg-cyan:focus,
+ a.bg-cyan:hover,
+ button.bg-cyan:focus,
+ button.bg-cyan:hover {
+  background-color:#00f7b5!important
+ }
+ .bg-white {
+  background-color:#fff!important
+ }
+ a.bg-white:focus,
+ a.bg-white:hover,
+ button.bg-white:focus,
+ button.bg-white:hover {
+  background-color:#e6e6e6!important
+ }
+ .bg-gray {
+  background-color:#8898aa!important
+ }
+ a.bg-gray:focus,
+ a.bg-gray:hover,
+ button.bg-gray:focus,
+ button.bg-gray:hover {
+  background-color:#6a7e95!important
+ }
+ .bg-gray-dark {
+  background-color:#32325d!important
+ }
+ a.bg-gray-dark:focus,
+ a.bg-gray-dark:hover,
+ button.bg-gray-dark:focus,
+ button.bg-gray-dark:hover {
+  background-color:#20203c!important
+ }
+ .bg-light {
+  background-color:#ced4da!important
+ }
+ a.bg-light:focus,
+ a.bg-light:hover,
+ button.bg-light:focus,
+ button.bg-light:hover {
+  background-color:#b1bbc4!important
+ }
+ .bg-lighter {
+  background-color:#e9ecef!important
+ }
+ a.bg-lighter:focus,
+ a.bg-lighter:hover,
+ button.bg-lighter:focus,
+ button.bg-lighter:hover {
+  background-color:#cbd3da!important
+ }
+ 
+.bg-gradient-primary {
+  background:linear-gradient(87deg,#5e72e4 0,#825ee4 100%)!important
+ }
+ .bg-gradient-secondary {
+  background:linear-gradient(87deg,#f7fafc 0,#f7f8fc 100%)!important
+ }
+ .bg-gradient-success {
+  background:linear-gradient(87deg,#2dce89 0,#2dcecc 100%)!important
+ }
+ .bg-gradient-info {
+  background:linear-gradient(87deg,#11cdef 0,#1171ef 100%)!important
+ }
+ .bg-gradient-warning {
+  background:linear-gradient(87deg,#fb6340 0,#fbb140 100%)!important
+ }
+ .bg-gradient-danger {
+  background:linear-gradient(87deg,#f5365c 0,#f56036 100%)!important
+ }
+ .bg-gradient-light {
+  background:linear-gradient(87deg,#adb5bd 0,#adaebd 100%)!important
+ }
+ .bg-gradient-dark {
+  background:linear-gradient(87deg,#212529 0,#212229 100%)!important
+ }
+ .bg-gradient-default {
+  background:linear-gradient(87deg,#172b4d 0,#1a174d 100%)!important
+ }
+ .bg-gradient-white {
+  background:linear-gradient(87deg,#fff 0,#fff 100%)!important
+ }
+ .bg-gradient-neutral {
+  background:linear-gradient(87deg,#fff 0,#fff 100%)!important
+ }
+ .bg-gradient-darker {
+  background:linear-gradient(87deg,#000 0,#000 100%)!important
+ }
+ .bg-gradient-blue {
+  background:linear-gradient(87deg,#5e72e4 0,#825ee4 100%)!important
+ }
+ .bg-gradient-indigo {
+  background:linear-gradient(87deg,#5603ad 0,#9d03ad 100%)!important
+ }
+ .bg-gradient-purple {
+  background:linear-gradient(87deg,#8965e0 0,#bc65e0 100%)!important
+ }
+ .bg-gradient-pink {
+  background:linear-gradient(87deg,#f3a4b5 0,#f3b4a4 100%)!important
+ }
+ .bg-gradient-red {
+  background:linear-gradient(87deg,#f5365c 0,#f56036 100%)!important
+ }
+ .bg-gradient-orange {
+  background:linear-gradient(87deg,#fb6340 0,#fbb140 100%)!important
+ }
+ .bg-gradient-yellow {
+  background:linear-gradient(87deg,#ffd600 0,#beff00 100%)!important
+ }
+ .bg-gradient-green {
+  background:linear-gradient(87deg,#2dce89 0,#2dcecc 100%)!important
+ }
+ .bg-gradient-teal {
+  background:linear-gradient(87deg,#11cdef 0,#1171ef 100%)!important
+ }
+ .bg-gradient-cyan {
+  background:linear-gradient(87deg,#2bffc6 0,#2be0ff 100%)!important
+ }
+ .bg-gradient-white {
+  background:linear-gradient(87deg,#fff 0,#fff 100%)!important
+ }
+ .bg-gradient-gray {
+  background:linear-gradient(87deg,#8898aa 0,#888aaa 100%)!important
+ }
+ .bg-gradient-gray-dark {
+  background:linear-gradient(87deg,#32325d 0,#44325d 100%)!important
+ }
+ .bg-gradient-light {
+  background:linear-gradient(87deg,#ced4da 0,#cecfda 100%)!important
+ }
+ .bg-gradient-lighter {
+  background:linear-gradient(87deg,#e9ecef 0,#e9eaef 100%)!important
+ }
+ .bg-translucent-primary {
+  background-color:rgba(63,87,223,.6)!important
+ }
+
+ /**
+ argon features
+ **/
+
+ .icon-shape {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  padding: 12px;
+  text-align: center;
+  border-radius: 50%;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.icon {
+  width: 3rem;
+  height: 3rem;
+}

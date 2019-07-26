@@ -1,0 +1,155 @@
+@import "./argon.css";
+
+$argon-dark-color:#172b4d;
+$argon-primary-color: #5e72e4;
+$argon-secondary-color: #f4f5f7;
+$argon-info-color: #11cdef;
+$argon-success-color: #2dce89;
+$argon-danger-color: #f5365c;
+$argon-warning-color: #fb6340;
+$argon-link-color: #525f7f;
+$argon-linkactive-color: #325f7f;
+
+body {
+  .application-v,
+  #app {
+    background-color: #f4f6fb !important;
+    font-family: 'Quicksand',  sans-serif !important;
+    letter-spacing: .5px;
+  }
+  #sidebar-app {
+    box-shadow: 0 0 2rem 0 rgba(136,152,170,.15) !important;
+  }
+  .dark-text {
+    color: $argon-dark-color !important;
+  }
+  .primary-text {
+    color: $argon-primary-color !important;
+  }
+  .secondary-text {
+    color: $argon-secondary-color !important;
+  }
+  .info-text {
+    color: $argon-info-color !important;
+  }
+  .success-text {
+    color: $argon-success-color !important;
+  }
+  .danger-text {
+    color: $argon-danger-color !important;
+  }
+  .warning-text {
+    color: $argon-warning-color !important;
+  }
+  .bg-dark {
+    background-color: $argon-dark-color !important;
+  }
+  .bg-primary {
+    background-color: $argon-primary-color !important;;
+  }
+  .bg-secondary {
+    background-color: $argon-secondary-color !important;
+  }
+  .bg-info {
+    background-color: $argon-info-color !important;
+  }
+  .bg-success {
+    background-color: $argon-success-color !important;
+  }
+  .bg-danger {
+    background-color: $argon-danger-color !important;
+  }
+  .bg-warning {
+    background-color: $argon-warning-color !important;
+  }
+
+  /**
+    Vuetify fix issue with textfield height minor of default value
+  **/
+  .height-issue-fix > div > .v-input__slot {
+    min-height: 100% !important;
+    max-height: 100%;
+    margin-bottom: 0.2em;
+  }
+
+  .height-issue-fix fieldset {
+    top: 0 !important;
+    height: inherit;
+  }
+  
+  .height-issue-fix fieldset legend {
+    display:none;
+  }
+  
+  .height-issue-fix .v-text-field__slot {
+    height: inherit;
+  }
+  
+  .height-issue-fix .v-input__append-inner {
+    height: inherit;
+    align-items: center;
+    align-self: unset !important;
+  }
+
+
+  /**
+    Vuetify hacks
+  **/
+  .no-hovered::before,
+  .no-hovered::before,
+  .no-hovered::before {
+    content: none;
+    display: none;
+  }
+
+  .side-link {
+    color: $argon-link-color !important;
+    transition: all cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+
+  .side-link:hover {
+    color: $argon-primary-color !important;
+  }
+
+  .side-link-active {
+    color: $argon-linkactive-color !important;
+    background-color: $argon-secondary-color !important;
+  }
+
+  .card-shadow {
+    box-shadow: 0 .125rem .25rem rgba(0,0,0,.075) !important;
+  }
+
+  .radius-25 {
+    border-radius: .25em !important;
+  }
+
+  .table table {
+    color: #525f7f;
+  }
+
+  .table table tbody tr:hover {
+    color: #525f7f;
+    background-color: #f6f9fc !important;
+  }
+
+  .table table > thead > tr > th{
+    font-size: .65rem;
+    padding-top: .75rem;
+    padding-bottom: .75rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: inherit !important;
+  }
+
+  .v-btn {
+    font-weight: 600;
+  }
+
+  /**
+  Bootstrap hacks
+  **/
+  .text-muted {
+    color: #8898aa !important;
+  }
+}
