@@ -1,6 +1,7 @@
 <script>
 import {HomeIcon} from 'vue-feather-icons'
 import FIcon from './shareds/FIcon'
+import {routes} from '../router'
 
 export default {
   name: 'sidebar',
@@ -9,6 +10,22 @@ export default {
   },
   props: {
     value: Boolean
+  },
+  computed: {
+    routes () {
+      routes.children = routes.children.map(function(item){
+        if (!item.hasOwnProperty('meta')) {
+          item.meta = {}
+        }
+
+        if (!item.meta.hasOwnProperty('icon')) {
+          item.meta.icon = 'AlertCircleIcon'
+        }
+        return item
+      })
+
+      return routes
+    }
   }
 }
 </script>
@@ -34,63 +51,19 @@ export default {
       dense
     >
     <v-list-item
+        v-for="router in routes.children"
+        :key="router.name"
         link
-        class="side-link no-hovered mb-2"
+        class="side-link no-hovered mb-2 text-capitalize"
         active-class="side-link-active"
-        to="/"
-        href="/"
+        :to="`${routes.path}/${router.path}`"
       >
         <v-list-item-icon>
-          <f-icon icon="HomeIcon" size="1.5x"></f-icon>
+          <f-icon :icon="router.meta.icon" size="1.5x"></f-icon>
         </v-list-item-icon>
 
         <v-list-item-content>
-          <v-list-item-title>Home</v-list-item-title>
-        </v-list-item-content>
-      </v-list-item>
-      <v-list-item
-        link
-        class="side-link no-hovered mb-2"
-        active-class="side-link-active"
-        to="/dashboard"
-        href="/dashboard"
-      >
-        <v-list-item-icon>
-          <f-icon icon="ActivityIcon" size="1.5x"></f-icon>
-        </v-list-item-icon>
-
-        <v-list-item-content>
-          <v-list-item-title>Dashboard</v-list-item-title>
-        </v-list-item-content>
-      </v-list-item>
-      <v-list-item
-        link
-        class="side-link no-hovered mb-2"
-        active-class="side-link-active"
-        to="/charts"
-        href="/charts"
-      >
-        <v-list-item-icon>
-          <f-icon icon="PieChartIcon" size="1.5x"></f-icon>
-        </v-list-item-icon>
-
-        <v-list-item-content>
-          <v-list-item-title>Charts</v-list-item-title>
-        </v-list-item-content>
-      </v-list-item>
-      <v-list-item
-        link
-        class="side-link no-hovered mb-2"
-        active-class="side-link-active"
-        to="/notifications"
-        href="/notifications"
-      >
-        <v-list-item-icon>
-          <f-icon icon="StarIcon" size="1.5x"></f-icon>
-        </v-list-item-icon>
-
-        <v-list-item-content>
-          <v-list-item-title>Notifications</v-list-item-title>
+          <v-list-item-title>{{router.name}}</v-list-item-title>
         </v-list-item-content>
       </v-list-item>
     </v-list>

@@ -23,20 +23,10 @@ function generate_token(length){
 }
 
 /**
- * Verbose way to define needAuth on routes not defined it
- * @param {VueRouter.Router} toRoute 
- */
-const defineMetaNeedAuthIfNotExist = (toRoute) => { 
-  if (toRoute.meta.hasOwnProperty('needAuth')) {
-    toRoute.meta.needAuth = false
-  }
-}
-
-/**
  * Verbose way to check needAuth
  * @param {VueRouter.Router} toRoute 
  */
-const routeNeededAuth = (toRoute) => toRoute.meta.needAuth
+const routeNeededAuth = (toRoute) => toRoute.meta.needAuth || false
 
 const routeIsEqualToLogin = (toRoute) => toRoute.path === LOGIN_URL
 
@@ -54,8 +44,6 @@ const authMiddleware = (to, from, next, context) => {
     context.logoutUser()
     return next(LOGIN_URL)
   }
-
-  defineMetaNeedAuthIfNotExist(to)
 
   if (routeNeededAuth(to) && context.isAuthenticated()) {
     return next()
