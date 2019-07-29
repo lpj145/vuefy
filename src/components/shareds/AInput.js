@@ -14,15 +14,18 @@ export default {
         h('label', { staticClass: 'font-weight-bold mb-2 d-block' }, props.label)
       )
     }
-    elements.push(h(VTextField, {
+
+    const fieldOptions = {
       ...context.data,
       props: {
         solo: true,
         outlined: true,
         flat: true
-      },
-      staticClass: 'height-issue-fix'
-    }))
+      }
+    }
+
+    fieldOptions.staticClass = context.data.attrs.height === undefined ? '' : 'height-issue-fix'
+    elements.push(h(VTextField, fieldOptions))
     return elements
   }
 }

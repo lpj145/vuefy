@@ -8,7 +8,7 @@ export default {
   },
   methods: {
     closeSidebarEvent () {
-      this.$emit('close-sidebar', false)
+      this.$emit('toggle-sidebar')
     }
   }
 }
@@ -71,6 +71,7 @@ export default {
           <v-divider></v-divider>
           <v-list-item
             @click=""
+            to="/logout"
           >
             <v-list-item-icon class="mr-2"><f-icon icon="LogOutIcon" size="0.9x"></f-icon></v-list-item-icon>
             <v-list-item-content>

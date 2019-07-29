@@ -63,6 +63,36 @@ export default {
           <v-list-item-title>Dashboard</v-list-item-title>
         </v-list-item-content>
       </v-list-item>
+      <v-list-item
+        link
+        class="side-link no-hovered"
+        active-class="side-link-active mb-2"
+        to="/charts"
+        href="/charts"
+      >
+        <v-list-item-icon>
+          <f-icon icon="PieChartIcon" size="1.5x"></f-icon>
+        </v-list-item-icon>
+
+        <v-list-item-content>
+          <v-list-item-title>Charts</v-list-item-title>
+        </v-list-item-content>
+      </v-list-item>
+      <v-list-item
+        link
+        class="side-link no-hovered"
+        active-class="side-link-active mb-2"
+        to="/notifications"
+        href="/notifications"
+      >
+        <v-list-item-icon>
+          <f-icon icon="StarIcon" size="1.5x"></f-icon>
+        </v-list-item-icon>
+
+        <v-list-item-content>
+          <v-list-item-title>Notifications</v-list-item-title>
+        </v-list-item-content>
+      </v-list-item>
     </v-list>
   </v-navigation-drawer>
 </template>
