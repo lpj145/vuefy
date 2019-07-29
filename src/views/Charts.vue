@@ -33,7 +33,7 @@ export default {
         </v-card-title>
         <v-divider></v-divider>
         <v-card-text>
-          <a-line-chart height="150"></a-line-chart>
+          <a-line-chart :height="150"></a-line-chart>
         </v-card-text>
       </v-card>
     </v-flex>
@@ -60,7 +60,7 @@ export default {
           </v-flex>
         </v-card-title>
         <v-card-text>
-          <a-pie-chart height="150"></a-pie-chart>
+          <a-pie-chart :height="150"></a-pie-chart>
         </v-card-text>
       </v-card>
     </v-flex>
@@ -73,7 +73,7 @@ export default {
           </v-flex>
         </v-card-title>
         <v-card-text>
-          <a-doughnut-chart height="150"></a-doughnut-chart>
+          <a-doughnut-chart :height="150"></a-doughnut-chart>
         </v-card-text>
       </v-card>
     </v-flex>

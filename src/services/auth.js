@@ -26,9 +26,11 @@ function generate_token(length){
  * Verbose way to check needAuth
  * @param {VueRouter.Router} toRoute 
  */
-const routeNeededAuth = (toRoute) => toRoute.meta.needAuth || false
+const routeNotNeededAuth = (toRoute) => toRoute.meta.needAuth === undefined || !toRoute.meta.needAuth
 
 const routeIsEqualToLogin = (toRoute) => toRoute.path === LOGIN_URL
+
+const routeIsEqualToLogout = (toRouter) => toRouter.path === LOGOUT_URL
 
 /**
  * When you need to navigate about routes, you needed to check if user is logged in
@@ -40,24 +42,20 @@ const routeIsEqualToLogin = (toRoute) => toRoute.path === LOGIN_URL
  * @param {Auth} context 
  */
 const authMiddleware = (to, from, next, context) => {
-  if (to.path === LOGOUT_URL) {
+  if (routeIsEqualToLogout(to)) {
     context.logoutUser()
     return next(LOGIN_URL)
   }
 
-  if (routeNeededAuth(to) && context.isAuthenticated()) {
+  if (context.isAuthenticated()) {
+    return routeIsEqualToLogin(to) ? next(PANEL_URL) : next()
+  }
+
+  if (routeNotNeededAuth(to)) {
     return next()
   }
 
-  if (context.isAuthenticated() && routeIsEqualToLogin(to)) {
-    return next(PANEL_URL)
-  }
-
-  if (!routeNeededAuth(to)) {
-    return next()
-  }
-
-  return next(LOGOUT_URL)
+  return next(LOGIN_URL)
 }
 
 /**
