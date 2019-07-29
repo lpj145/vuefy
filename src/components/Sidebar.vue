@@ -50,8 +50,8 @@ export default {
       </v-list-item>
       <v-list-item
         link
-        class="side-link no-hovered"
-        active-class="side-link-active mb-2"
+        class="side-link no-hovered mb-2"
+        active-class="side-link-active"
         to="/dashboard"
         href="/dashboard"
       >
@@ -65,8 +65,8 @@ export default {
       </v-list-item>
       <v-list-item
         link
-        class="side-link no-hovered"
-        active-class="side-link-active mb-2"
+        class="side-link no-hovered mb-2"
+        active-class="side-link-active"
         to="/charts"
         href="/charts"
       >
@@ -80,8 +80,8 @@ export default {
       </v-list-item>
       <v-list-item
         link
-        class="side-link no-hovered"
-        active-class="side-link-active mb-2"
+        class="side-link no-hovered mb-2"
+        active-class="side-link-active"
         to="/notifications"
         href="/notifications"
       >
