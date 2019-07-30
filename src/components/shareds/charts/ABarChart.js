@@ -4,34 +4,19 @@ export default {
   name: 'a-bar-chart',
   extends: Bar,
   props: {
-
+    values: Array,
+    labels: Array
   },
   data () {
     return {
       data: {
-        labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+        labels: this.labels,
         datasets: [{
           label: '',
-          data: [4, 7, 3, 5, 2, 3],
-          borderCapStyle: 'rounded',
+          data: this.values,
           pointBackgroundColor: 'rgba(255, 255, 255, 0.4)',
-          backgroundColor: [
-            'rgba(251,99,64, 1)',
-            'rgba(251,99,64, 1)',
-            'rgba(251,99,64, 1)',
-            'rgba(251,99,64, 1)',
-            'rgba(251,99,64, 1)',
-            'rgba(251,99,64, 1)'
-          ],
-          borderColor: [
-            'rgba(94, 114, 228, 0)',
-            'rgba(94, 114, 228, 0)',
-            'rgba(94, 114, 228, 0)',
-            'rgba(94, 114, 228, 0)',
-            'rgba(94, 114, 228, 0)',
-            'rgba(94, 114, 228, 0)'
-          ],
-          borderWidth: 5,
+          backgroundColor: 'rgba(251,99,64, 1)',
+          borderWidth: 0,
           fill: false
         }]
       },
@@ -68,6 +53,10 @@ export default {
     }
   },
   mounted() {
+    if (this.labels === undefined || this.values === undefined) {
+      throw 'Not inserted labels and values properties! for ABarChart component'
+    }
+
     this.renderChart(
       this.data,
       this.options

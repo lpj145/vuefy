@@ -13,6 +13,24 @@ export default {
     APieChart,
     ALineChart,
     ADoughnutChart
+  },
+  data () {
+    return {
+      selectedFilterMonth: true
+    }
+  },
+  methods: {
+    changeLineChartData (month) {
+      this.selectedFilterMonth = month
+    }
+  },
+  computed: {
+    valuesLineChart () {
+      if (this.selectedFilterMonth) {
+        return [99, 118, 245, 299, 315, 198]
+      }
+      return [55, 69, 33, 82, 49, 55]
+    }
   }
 }
 </script>
@@ -27,13 +45,19 @@ export default {
             <h2 class="white--text title font-weight-bold mt-0">Social Performance</h2>
           </v-flex>
           <v-flex shrink pa-1>
-            <v-btn class="mr-2" small text color="success">Month</v-btn>
-            <v-btn text class="text-muted" small dark>Week</v-btn>
+            <v-btn @click="changeLineChartData(true)" text :class="[selectedFilterMonth ? 'success--text' : 'text-muted' ,'mr-2']" small>Month</v-btn>
+            <v-btn @click="changeLineChartData(false)" text :class="[!selectedFilterMonth ? 'success--text' : 'text-muted']" small>Week</v-btn>
           </v-flex>
         </v-card-title>
         <v-divider></v-divider>
         <v-card-text>
-          <a-line-chart :height="150"></a-line-chart>
+          <a-line-chart
+            ref="lineChart"
+            :height="150"
+            :values="valuesLineChart"
+            :labels="['Jan', 'Fev', 'Mar','Abr', 'Mai', 'Jun']"
+          >
+          </a-line-chart>
         </v-card-text>
       </v-card>
     </v-flex>
@@ -47,7 +71,11 @@ export default {
         </v-card-title>
         <v-divider></v-divider>
         <v-card-text>
-          <a-bar-chart :height="322"></a-bar-chart>
+          <a-bar-chart
+            :labels="['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun']"
+            :values="[22, 32, 42, 99, 149, 82]"
+            :height="322"
+          ></a-bar-chart>
         </v-card-text>
       </v-card>
     </v-flex>

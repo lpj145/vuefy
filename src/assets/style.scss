@@ -7,8 +7,8 @@ $argon-info-color: #11cdef;
 $argon-success-color: #2dce89;
 $argon-danger-color: #f5365c;
 $argon-warning-color: #fb6340;
-$argon-link-color: #525f7f;
-$argon-linkactive-color: #325f7f;
+$argon-link-color: #576482;
+$argon-linkactive-color: #06273F;
 
 body {
 
@@ -120,17 +120,27 @@ body {
   }
 
   .side-link {
-    color: $argon-link-color !important;
     transition: all cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    color: $argon-link-color !important;
   }
 
-  .side-link:hover {
+  .side-link .v-list-item__icon svg,
+  .side-link .v-list-item__content .v-list-item__title {
+    color: $argon-link-color;
+  }
+
+  .side-link:hover .v-list-item__icon svg,
+  .side-link:hover .v-list-item__content .v-list-item__title {
     color: $argon-primary-color !important;
   }
 
-  .side-link-active {
+  .side-link-active > .v-list-item__icon > svg,
+  .side-link-active > .v-list-item__content > .v-list-item__title {
     color: $argon-linkactive-color !important;
-    background-color: $argon-secondary-color !important;
+  }
+
+  a.side-link-active {
+    background-color: #E9EFF9 !important;
   }
 
   .card-shadow {
