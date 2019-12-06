@@ -12,11 +12,19 @@ export const routes = {
   children: [
     {
       path: 'dashboard',
-      name: 'dashboard',
+      name: 'Inicio',
       component: () => import('./views/Dashboard.vue'),
       meta: {
-        icon: 'HomeIcon'
+        icon: 'MonitorIcon'
       }
+    },
+    {
+      path: 'empresas',
+      name: 'Empresas',
+      // route level code-splitting
+      // this generates a separate chunk (about.[hash].js) for this route
+      // which is lazy-loaded when the route is visited.
+      component: () => import( './views/Empresa.vue'),
     },
     {
       path: 'about',
