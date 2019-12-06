@@ -1,5 +1,4 @@
 import {saveToken, destroyToken, haveToken} from './localstorage'
-import VueRouter from 'vue-router';
 
 const USER_EMAIL = 'admin@example.com'
 const USER_PASSWORD = 'admin'

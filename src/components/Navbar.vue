@@ -37,7 +37,7 @@ export default {
           </v-btn>
         </template>
         <v-list>
-          <v-list-item v-for="i in 5" :key="i" @click="">
+          <v-list-item v-for="i in 5" :key="i" >
             <v-list-item-avatar>
               <v-img :src="`https://randomuser.me/api/portraits/men/${i}.jpg`"></v-img>
             </v-list-item-avatar>
@@ -52,17 +52,13 @@ export default {
           <v-btn class="no-hovered body-2" v-on="on" text :ripple="false">Marcos Dantas</v-btn>
         </template>
         <v-list elevation-0>
-          <v-list-item
-            @click=""
-          >
+          <v-list-item>
             <v-list-item-icon class="mr-2"><f-icon icon="Edit3Icon" size="1x"></f-icon></v-list-item-icon>
             <v-list-item-content>
               <v-list-item-title>Edit Profile</v-list-item-title>
             </v-list-item-content>
           </v-list-item>
-          <v-list-item
-            @click=""
-          >
+          <v-list-item>
             <v-list-item-icon class="mr-2"><f-icon icon="SettingsIcon" size="1x"></f-icon></v-list-item-icon>
             <v-list-item-content>
               <v-list-item-title>Settings</v-list-item-title>
@@ -70,7 +66,6 @@ export default {
           </v-list-item>
           <v-divider></v-divider>
           <v-list-item
-            @click=""
             to="/logout"
           >
             <v-list-item-icon class="mr-2"><f-icon icon="LogOutIcon" size="0.9x"></f-icon></v-list-item-icon>

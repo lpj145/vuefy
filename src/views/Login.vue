@@ -16,11 +16,11 @@ export default {
       const {email, password} = target.elements
       this.tryingLogin = true
       auth().loginwithEmailAndPassword(email.value, password.value)
-        .then( d => {
+        .then( () => {
           this.tryingLogin = false
           auth().redirectToHomeOrCalledUrl()
         })
-        .catch( d => {
+        .catch( () => {
           this.tryingLogin = false
           this.erroLogin = 'Login falho!'
         })

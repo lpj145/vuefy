@@ -65,7 +65,7 @@ export default {
                   </v-btn>
                 </template>
                 <v-list>
-                  <v-list-item @click="">
+                  <v-list-item>
                     <v-list-item-content>
                       <v-list-item-title>Action 1</v-list-item-title>
                     </v-list-item-content>

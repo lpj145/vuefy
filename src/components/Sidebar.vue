@@ -1,5 +1,4 @@
 <script>
-import {HomeIcon} from 'vue-feather-icons'
 import FIcon from './shareds/FIcon'
 import {routes} from '../router'
 
