@@ -1,5 +1,7 @@
 # vuefy
 
+This product is served by cloduflare pages beta under https://vuefy.pages.dev/.
+
 ## Project setup
 ```
 npm install
